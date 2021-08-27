@@ -1,0 +1,131 @@
+<!-- This page will be redirected from any url if you are not logged in -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fablix</title>
+<style>
+    h1 {text-align: center;}
+    h2 {text-align: center;}
+    h3 {text-align: center;}
+    form {text-align: center;}
+    div {text-align: center;}
+</style>
+<!-- include jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- include jquery autocomplete JS  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+<!-- Bootstrap for CSS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Welcome to Fablix!</h1>
+<h2><b><a href="cart">Proceed to checkout</a></b></h2>
+<h2>Search</h2>
+<!-- Set the method to POST to avoid showing the username/password in the URL
+     The default action is disabled to allow your own implementation. -->
+
+<form action="movies.html" method="GET">
+    <br>
+    <label><b>Title</b></label>
+    <label>
+        <input type="text" name="title" id="autocomplete"
+               class="autocomplete-searchbox form-control"
+               placeholder="Enter Title"/>
+        <script src="index.js"></script>
+    </label>
+    <br>
+    <label><b>Year</b></label>
+    <label>
+        <input name="year" placeholder="Enter Year" class="year form-control" type="text" autocomplete="off">
+    </label>
+    <br>
+    <label><b>Director</b></label>
+    <label>
+        <input name="director" placeholder="Enter Director's Name" class="director form-control" type="text" autocomplete="off">
+    </label>
+    <br>
+    <label><b>Star's Name</b></label>
+    <label>
+        <input name="starName" placeholder="Enter Star's Name" class="star form-control" type="text" autocomplete="off">
+    </label>
+    <br>
+    <input type="submit" value="Search">
+    <br><br>
+</form>
+<h2>Browse Movie</h2>
+<h3>By Genre:</h3>
+<div>
+    <label><b><a href="movies.html?genre=Action">Action</a></b></label>
+    <label><b><a href="movies.html?genre=Adult">Adult</a></b></label>
+    <label><b><a href="movies.html?genre=Adventure">Adventure</a></b></label>
+    <label><b><a href="movies.html?genre=Animation">Animation</a></b></label>
+    <label><b><a href="movies.html?genre=Biography">Biography</a></b></label>
+    <label><b><a href="movies.html?genre=Comedy">Comedy</a></b></label>
+    <label><b><a href="movies.html?genre=Crime">Crime</a></b></label>
+    <label><b><a href="movies.html?genre=Documentary">Documentary</a></b></label>
+    <label><b><a href="movies.html?genre=Drama">Drama</a></b></label>
+    <label><b><a href="movies.html?genre=Family">Family</a></b></label>
+    <label><b><a href="movies.html?genre=Fantasy">Fantasy</a></b></label>
+    <label><b><a href="movies.html?genre=History">History</a></b></label>
+    <label><b><a href="movies.html?genre=Horror">Horror</a></b></label>
+    <label><b><a href="movies.html?genre=Music">Music</a></b></label>
+    <label><b><a href="movies.html?genre=Musical">Musical</a></b></label>
+    <label><b><a href="movies.html?genre=Mystery">Mystery</a></b></label>
+    <label><b><a href="movies.html?genre=Reality-TV">Reality-TV</a></b></label>
+    <label><b><a href="movies.html?genre=Romance">Romance</a></b></label>
+    <label><b><a href="movies.html?genre=Sci-Fi">Sci-Fi</a></b></label>
+    <label><b><a href="movies.html?genre=Sport">Sport</a></b></label>
+    <label><b><a href="movies.html?genre=Thriller">Thriller</a></b></label>
+    <label><b><a href="movies.html?genre=War">War</a></b></label>
+    <label><b><a href="movies.html?genre=Western">Western</a></b></label>
+    <br>
+</div>
+<div>
+    <h3>By Movie Title:</h3>
+    <label><b><a href="movies.html?charTitle=*">*</a></b></label>
+    <label><b><a href="movies.html?charTitle=0">0</a></b></label>
+    <label><b><a href="movies.html?charTitle=1">1</a></b></label>
+    <label><b><a href="movies.html?charTitle=2">2</a></b></label>
+    <label><b><a href="movies.html?charTitle=3">3</a></b></label>
+    <label><b><a href="movies.html?charTitle=4">4</a></b></label>
+    <label><b><a href="movies.html?charTitle=5">5</a></b></label>
+    <label><b><a href="movies.html?charTitle=6">6</a></b></label>
+    <label><b><a href="movies.html?charTitle=7">7</a></b></label>
+    <label><b><a href="movies.html?charTitle=8">8</a></b></label>
+    <label><b><a href="movies.html?charTitle=9">9</a></b></label>
+    <label><b><a href="movies.html?charTitle=a">a</a></b></label>
+    <label><b><a href="movies.html?charTitle=b">b</a></b></label>
+    <label><b><a href="movies.html?charTitle=c">c</a></b></label>
+    <label><b><a href="movies.html?charTitle=d">d</a></b></label>
+    <label><b><a href="movies.html?charTitle=e">e</a></b></label>
+    <label><b><a href="movies.html?charTitle=f">f</a></b></label>
+    <label><b><a href="movies.html?charTitle=g">g</a></b></label>
+    <label><b><a href="movies.html?charTitle=h">h</a></b></label>
+    <label><b><a href="movies.html?charTitle=i">i</a></b></label>
+    <label><b><a href="movies.htm;?charTitle=j">j</a></b></label>
+    <label><b><a href="movies.html?charTitle=k">k</a></b></label>
+    <label><b><a href="movies.html?charTitle=l">l</a></b></label>
+    <label><b><a href="movies.html?charTitle=m">m</a></b></label>
+    <label><b><a href="movies.html?charTitle=n">n</a></b></label>
+    <label><b><a href="movies.html?charTitle=o">o</a></b></label>
+    <label><b><a href="movies.html?charTitle=p">p</a></b></label>
+    <label><b><a href="movies.html?charTitle=q">q</a></b></label>
+    <label><b><a href="movies.html?charTitle=r">r</a></b></label>
+    <label><b><a href="movies.html?charTitle=s">s</a></b></label>
+    <label><b><a href="movies.html?charTitle=t">t</a></b></label>
+    <label><b><a href="movies.html?charTitle=u">u</a></b></label>
+    <label><b><a href="movies.html?charTitle=v">v</a></b></label>
+    <label><b><a href="movies.html?charTitle=w">w</a></b></label>
+    <label><b><a href="movies.html?charTitle=x">x</a></b></label>
+    <label><b><a href="movies.html?charTitle=y">y</a></b></label>
+    <label><b><a href="movies.html?charTitle=z">z</a></b></label>
+    <br>
+</div>
+</body>
+</html>

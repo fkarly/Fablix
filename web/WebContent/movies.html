@@ -1,0 +1,228 @@
+<!-- This example is following frontend and backend separation.
+
+    This .html performs two steps:
+    1. Create a html template skeleton, with all the elements defined (some left empty) and named with ids.
+    2. Load movies.js to populate the data into empty elements.
+    -->
+
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- include jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- include jquery autocomplete JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.4.7/jquery.autocomplete.min.js"></script>
+    <!-- Bootstrap for CSS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Movie List</title>
+<style>
+    h1 {text-align: center;}
+    h5 {text-align: center;}
+    form {text-align: center;}
+    div {text-align: center;}
+</style>
+</head>
+<body>
+
+<h1>Movies</h1>
+<h5><b><a href="cart">Proceed to checkout</a></b></h5>
+<h5>Search</h5>
+<!-- Set the method to POST to avoid showing the username/password in the URL
+     The default action is disabled to allow your own implementation. -->
+<form action="movies.html" method="GET">
+    <label><b>Title</b></label>
+    <label>
+        <input type="text" name="title" id="autocomplete"
+               class="autocomplete-searchbox form-control"
+               placeholder="Enter Title"/>
+        <script src="index.js"></script>
+    </label>
+    <label><b>Year</b></label>
+    <label>
+        <input name="year" placeholder="Enter Year" class="year form-control" type="text" autocomplete="off">
+    </label>
+    <label><b>Director</b></label>
+    <label>
+        <input name="director" placeholder="Enter Director's Name" class="director form-control" type="text" autocomplete="off">
+    </label>
+    <label><b>Star's Name</b></label>
+    <label>
+        <input name="starName" placeholder="Enter Star's Name" class="star form-control" type="text" autocomplete="off">
+    </label>
+    <input type="submit" value="Search">
+</form>
+<h5>Browse Movie</h5>
+<h5>By Genre:</h5>
+<div>
+    <label><b><a href="movies.html?genre=Action">Action</a></b></label>
+    <label><b><a href="movies.html?genre=Adult">Adult</a></b></label>
+    <label><b><a href="movies.html?genre=Adventure">Adventure</a></b></label>
+    <label><b><a href="movies.html?genre=Animation">Animation</a></b></label>
+    <label><b><a href="movies.html?genre=Biography">Biography</a></b></label>
+    <label><b><a href="movies.html?genre=Comedy">Comedy</a></b></label>
+    <label><b><a href="movies.html?genre=Crime">Crime</a></b></label>
+    <label><b><a href="movies.html?genre=Documentary">Documentary</a></b></label>
+    <label><b><a href="movies.html?genre=Drama">Drama</a></b></label>
+    <label><b><a href="movies.html?genre=Family">Family</a></b></label>
+    <label><b><a href="movies.html?genre=Fantasy">Fantasy</a></b></label>
+    <label><b><a href="movies.html?genre=History">History</a></b></label>
+    <label><b><a href="movies.html?genre=Horror">Horror</a></b></label>
+    <label><b><a href="movies.html?genre=Music">Music</a></b></label>
+    <label><b><a href="movies.html?genre=Musical">Musical</a></b></label>
+    <label><b><a href="movies.html?genre=Mystery">Mystery</a></b></label>
+    <label><b><a href="movies.html?genre=Reality-TV">Reality-TV</a></b></label>
+    <label><b><a href="movies.html?genre=Romance">Romance</a></b></label>
+    <label><b><a href="movies.html?genre=Sci-Fi">Sci-Fi</a></b></label>
+    <label><b><a href="movies.html?genre=Sport">Sport</a></b></label>
+    <label><b><a href="movies.html?genre=Thriller">Thriller</a></b></label>
+    <label><b><a href="movies.html?genre=War">War</a></b></label>
+    <label><b><a href="movies.html?genre=Western">Western</a></b></label>
+    <br>
+</div>
+<div>
+    <h5>By Movie Title:</h5>
+    <label><b><a href="movies.html?charTitle=*">*</a></b></label>
+    <label><b><a href="movies.html?charTitle=0">0</a></b></label>
+    <label><b><a href="movies.html?charTitle=1">1</a></b></label>
+    <label><b><a href="movies.html?charTitle=2">2</a></b></label>
+    <label><b><a href="movies.html?charTitle=3">3</a></b></label>
+    <label><b><a href="movies.html?charTitle=4">4</a></b></label>
+    <label><b><a href="movies.html?charTitle=5">5</a></b></label>
+    <label><b><a href="movies.html?charTitle=6">6</a></b></label>
+    <label><b><a href="movies.html?charTitle=7">7</a></b></label>
+    <label><b><a href="movies.html?charTitle=8">8</a></b></label>
+    <label><b><a href="movies.html?charTitle=9">9</a></b></label>
+    <label><b><a href="movies.html?charTitle=a">a</a></b></label>
+    <label><b><a href="movies.html?charTitle=b">b</a></b></label>
+    <label><b><a href="movies.html?charTitle=c">c</a></b></label>
+    <label><b><a href="movies.html?charTitle=d">d</a></b></label>
+    <label><b><a href="movies.html?charTitle=e">e</a></b></label>
+    <label><b><a href="movies.html?charTitle=f">f</a></b></label>
+    <label><b><a href="movies.html?charTitle=g">g</a></b></label>
+    <label><b><a href="movies.html?charTitle=h">h</a></b></label>
+    <label><b><a href="movies.html?charTitle=i">i</a></b></label>
+    <label><b><a href="movies.html?charTitle=j">j</a></b></label>
+    <label><b><a href="movies.html?charTitle=k">k</a></b></label>
+    <label><b><a href="movies.html?charTitle=l">l</a></b></label>
+    <label><b><a href="movies.html?charTitle=m">m</a></b></label>
+    <label><b><a href="movies.html?charTitle=n">n</a></b></label>
+    <label><b><a href="movies.html?charTitle=o">o</a></b></label>
+    <label><b><a href="movies.html?charTitle=p">p</a></b></label>
+    <label><b><a href="movies.html?charTitle=q">q</a></b></label>
+    <label><b><a href="movies.html?charTitle=r">r</a></b></label>
+    <label><b><a href="movies.html?charTitle=s">s</a></b></label>
+    <label><b><a href="movies.html?charTitle=t">t</a></b></label>
+    <label><b><a href="movies.html?charTitle=u">u</a></b></label>
+    <label><b><a href="movies.html?charTitle=v">v</a></b></label>
+    <label><b><a href="movies.html?charTitle=w">w</a></b></label>
+    <label><b><a href="movies.html?charTitle=x">x</a></b></label>
+    <label><b><a href="movies.html?charTitle=y">y</a></b></label>
+    <label><b><a href="movies.html?charTitle=z">z</a></b></label>
+    <br>
+</div>
+<div>
+    <label>Sort By: </label>
+    <button onclick="list(10)">10</button>
+    <button onclick="list(25)">25</button>
+    <button onclick="list(50)">50</button>
+    <button onclick="list(100)">100</button>
+    <script>
+        function list(num){
+            let oldUrl = window.location.href;
+            let newUrl = oldUrl;
+            if(oldUrl.includes("pageNum") && !oldUrl.includes("nList")){
+                newPage = oldUrl.substring(oldUrl.indexOf("pageNum"), oldUrl.length);
+                console.log("newPage = " + newPage);
+                newUrl = newUrl.substring(0, oldUrl.indexOf("pageNum"));
+                newUrl = newUrl + "nList="+ num + "&" + newPage;
+            }
+            else if(oldUrl.includes("nList")){
+                newUrl = oldUrl.substring(0, oldUrl.indexOf("nList"));
+                newUrl = newUrl + "nList=" + num;
+            }
+            else{
+                newUrl = newUrl + "&nList=" + num;
+            }
+            location.href = newUrl;
+        }
+    </script>
+    <br>
+    <button onclick="page(0)">Previous</button>
+    <button onclick="page(1)">Next</button>
+    <script>
+        function page(num){
+            let oldUrl = window.location.href;
+            let newUrl = oldUrl;
+            if(oldUrl.includes("pageNum=1" && parseInt(num) == 0)){
+                newUrl = oldUrl;
+            }
+            else if(oldUrl.includes("pageNum") && !oldUrl.includes("pageNum=0")){
+                newUrl = oldUrl.substring(0, oldUrl.indexOf("pageNum="));
+                index = oldUrl.indexOf("pageNum=") + 8;
+                if(parseInt(num) == 0 && !oldUrl.includes("pageNum=1")){
+                    number = parseInt(oldUrl.substring(index, oldUrl.length)) - 1;
+                    newUrl = newUrl + "pageNum=" + number;
+                    location.href = newUrl;
+                }
+                else if(parseInt(num) == 1){
+                    number = parseInt(oldUrl.substring(index, oldUrl.length)) + 1;
+                    newUrl = newUrl + "pageNum=" + number;
+                    location.href = newUrl;
+                }
+            }
+            else{
+                if(parseInt(num) == 1){
+                    newUrl = newUrl + "&pageNum=" + 2;
+                    location.href = newUrl;
+                }
+            }
+        }
+    </script>
+</div>
+<!-- Id "movie_table" is useful for jQuery to find the html element with id, class here is mapping to Bootstrap defined class CSS -->
+<table id=movie_table class="table table-striped">
+    <!-- Create a table header -->
+    <thead>
+    <tr>
+        <!-- Titles of each column-->
+        <th>Title</th>
+        <th>Year</th>
+        <th>Director</th>
+        <th>Genre</th>
+        <th>Stars</th>
+        <th>Rating</th>
+<!--        <th>Name</th>-->
+<!--        <th>DOB</th>-->
+    </tr>
+    </thead>
+    <!-- Table body is left empty here, will be populated with the data retrieved with movies.js -->
+    <!-- Again, id "movies_table_body" is useful for jQuery to find this html element -->
+    <tbody id=movie_table_body></tbody>
+</table>
+
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- Load our own JS file -->
+<!-- The path is relative to movies.html, since these two files are in the same directory -->
+<!-- Note the url does not contain a "/" in the beginning, which means the url is relative to current path
+     otherwise the url is relative to the root path-->
+<script src="movies.js"></script>
+</body>
+
+
+</html>
